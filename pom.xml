@@ -72,6 +72,17 @@
             <id>techscode</id>
             <url>https://repo.techscode.com/repository/techscode-apis/</url>
         </repository>
+
+        <repository>
+            <id>phoenix</id>
+            <url>https://nexus.phoenixdevt.fr/repository/maven-public/</url>
+        </repository>
+
+        <repository>
+            <id>nexomc</id>
+            <url>https://repo.nexomc.com/releases</url>
+        </repository>
+
     </repositories>
 
     <dependencies>
@@ -85,8 +96,9 @@
         <dependency>
             <groupId>su.nightexpress.nightcore</groupId>
             <artifactId>nightcore</artifactId>
-            <version>2.7.3</version>
-            <scope>provided</scope>
+            <version>2.7.3.4</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/nightcore-2.7.3.4.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -112,25 +124,29 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Local -->
         <dependency>
             <groupId>me.mraxetv.beasttokens</groupId>
             <artifactId>BeastTokens</artifactId>
-            <version>3.11.1</version>
-            <scope>provided</scope>
+            <version>3.11.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/bt-api-3.11.0.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>com.bencodez</groupId>
             <artifactId>votingplugin</artifactId>
-            <version>6.15.1</version>
+            <version>6.14.1</version>
             <scope>provided</scope>
         </dependency>
 
+        <!-- Local -->
         <dependency>
             <groupId>com.magmaguy.elitemobs</groupId>
             <artifactId>EliteMobs</artifactId>
             <version>8.5.4</version>
-            <scope>provided</scope>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/EliteMobs.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -149,9 +165,15 @@
 
         <!-- Item Bridge -->
         <dependency>
-            <groupId>com.nexomc.nexo</groupId>
-            <artifactId>Nexo</artifactId>
-            <version>0.9-dev</version>
+            <groupId>com.nexomc</groupId>
+            <artifactId>nexo</artifactId>
+            <version>0.9.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
             <scope>provided</scope>
         </dependency>
 
@@ -163,10 +185,17 @@
         </dependency>
 
         <dependency>
-            <groupId>io.th0rgal.oraxen</groupId>
-            <artifactId>Oraxen</artifactId>
-            <version>1.155.1</version>
-            <scope>provided</scope>
+            <groupId>io.th0rgal</groupId>
+            <artifactId>oraxen</artifactId>
+            <version>1.163.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/oraxen-1.163.0-dev-all.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -176,10 +205,9 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Local -->
         <dependency>
-            <groupId>io.lumine.mythic.lib</groupId>
-            <artifactId>MythicLib</artifactId>
+            <groupId>io.lumine</groupId>
+            <artifactId>MythicLib-dist</artifactId>
             <version>1.6.2-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
@@ -189,7 +217,8 @@
             <groupId>com.ssomar.score</groupId>
             <artifactId>SCore</artifactId>
             <version>5.24.12.29</version>
-            <scope>provided</scope>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/SCore-5.24.12.29.jar</systemPath>
         </dependency>
 
         <dependency>
